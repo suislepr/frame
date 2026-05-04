@@ -20,7 +20,7 @@ Where:
 Create a button and mount it into the document body
 
 ```js
-import { createElement, render } from '../dom.js';
+import { createElement, render } from '../framework/dom.js';
 
 const btn = createElement(
   'button',

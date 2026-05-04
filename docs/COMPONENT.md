@@ -22,8 +22,8 @@ This file explains how to create and use simple components in this project.
 Create Greeting component
 
 ```js
-import { createComponent } from '../src/components.js';
-import { createElement } from '../src/dom.js';
+import { createComponent } from '../framework/component.js';
+import { createElement } from '../framework/dom.js';
 
 const Greeting = createComponent((props) =>
   createElement('div', {}, `Hello ${props.name}`),

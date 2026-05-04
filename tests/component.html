@@ -5,8 +5,8 @@
     <div id="app"></div>
 
     <script type="module">
-      import { createComponent } from '../src/component.js';
-      import { createElement } from '../src/dom.js';
+      import { createComponent } from '../framework/component.js';
+      import { createElement } from '../framework/dom.js';
 
       const Greeting = createComponent((props) =>
         createElement('div', {}, `Hello ${props.name}`)
