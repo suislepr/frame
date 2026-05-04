@@ -2,16 +2,16 @@
   <head>
   </head>
   <body>
-    <script type="module">
 
-      import { createElement, render } from '../framework/dom.js';
+    <script type="module">
+      import { createElement, render } from '../src/dom.js';
       const btn = createElement(
         'button',
         { id: 1, onClick: () => alert('It works!') },
         'Try',
       );
       render(btn, document.body);
-
     </script>
+
   </body>
 </html>
