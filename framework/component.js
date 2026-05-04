@@ -1,11 +1,11 @@
-// Create a component factory function that takes a render function and returns a component constructor
+// Create a component factory function that takes a renderFn function and returns a component constructor
 
-export function createComponent(render) {
+export function createComponent(renderFn) {
   return function (props) {
     const component = {
       props,
       container: null,
-      node: render(props),
+      node: renderFn(props),
 
       // Method to mount the component to a DOM container
       mount(container) {
@@ -16,7 +16,7 @@ export function createComponent(render) {
       // Method to update the component with new props
       update(newProps) {
         component.props = newProps ?? component.props;
-        const newNode = render(component.props);
+        const newNode = renderFn(component.props);
         component.container.replaceChild(newNode, component.node);
         component.node = newNode;
       },

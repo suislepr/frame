@@ -4,18 +4,18 @@ This file explains how to create and use simple components in this project.
 
 ### Create a component:
 
-- `createComponent(render)` - returns a factory function for a component.
-- `render` is a function that receives `props` and returns a DOM node (use `createElement` to build nodes).
+- `createComponent(renderFn)` - returns a factory function for a component.
+- `renderFn` is a function that receives `props` and returns a DOM node (use `createElement` to build nodes).
 
 ### Create an instance:
 
-- `const MyComp = createComponent(render);`
+- `const MyComp = createComponent(renderFn);`
 - `const inst = MyComp({ /* props */ });` - `inst` holds the mounted node and methods.
 
 ### Instance methods:
 
 - `inst.mount(container)` - append component to a DOM container.
-- `inst.update(newProps)` - re-run `render` with `newProps`, replace the old node in the same container.
+- `inst.update(newProps)` - re-run `renderFn` with `newProps`, replace the old node in the same container.
 
 ### Example
 
