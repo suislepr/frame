@@ -10,12 +10,12 @@ This file explains how to create and use simple components in this project.
 ### Create an instance:
 
 - `const MyComp = createComponent(render);`
-- `const instance = MyComp({ /* props */ });` - `instance` holds the mounted node and methods.
+- `const inst = MyComp({ /* props */ });` - `inst` holds the mounted node and methods.
 
 ### Instance methods:
 
-- `instance.mount(container)` - append component to a DOM container.
-- `instance.update(newProps)` - re-run `render` with `newProps`, replace the old node in the same container.
+- `inst.mount(container)` - append component to a DOM container.
+- `inst.update(newProps)` - re-run `render` with `newProps`, replace the old node in the same container.
 
 ### Example
 
