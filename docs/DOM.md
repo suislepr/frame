@@ -1,6 +1,6 @@
 # DOM Manipulation
 
-This file explains how to create and mount DOM nodes in this project.
+This is the heart of the framework. It lets developers create and compose HTML elements in pure JavaScript.
 
 ### Create a node:
 
@@ -41,8 +41,11 @@ Result:
 
 Behavior: clicking the button shows an alert with the message "It works!".
 
-Notes:
+### Design principles:
 
+- `createElement` produces a real DOM node, not a virtual tree.
 - Event props use `onX` format (e.g. `onClick`) and are attached with `addEventListener`.
 - The `style` prop accepts an object (e.g. `{ color: 'red' }`).
 - `class` maps to the element's `className`.
+- `render` replaces container content and appends a single root node.
+- Children can be strings, numbers, or nested DOM elements.

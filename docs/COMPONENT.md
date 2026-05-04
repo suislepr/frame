@@ -1,10 +1,10 @@
-# Components
+# Component Managment
 
-This file explains how to create and use simple components in this project.
+Reusable component architecture. A component is a function that returns a DOM element.
 
 ### Create a component:
 
-- `createComponent(renderFn)` - returns a factory function for a component.
+- `createComponent(renderFn)` - wraps a render function so it can re-render itself when state changes.
 - `renderFn` is a function that receives `props` and returns a DOM node (use `createElement` to build nodes).
 
 ### Create an instance:
@@ -52,3 +52,12 @@ After 2 seconds, `inst.update({ name: 'Liza' })` changes the output to:
   <div>Hello Liza</div>
 </div>
 ```
+
+### Design principles:
+
+- Components are functions, not classes.
+- A component receives `props` and returns a DOM node.
+- `mount` keeps the component attached to the same container.
+- `update` re-renders only the component node, not the whole page.
+- Simple state and props flow makes components easy to reuse.
+- The component API is small and predictable (`mount`, `update`).
